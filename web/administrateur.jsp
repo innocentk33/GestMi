@@ -17,13 +17,11 @@
 <%--verification de la session--%>
 <%--<%@include file="session.jsp" %>--%>
 <c:if test="${!empty sessionScope.email}">
-   <%@include file="inc/navbarConnecter.jsp"%>
+    <%@include file="inc/navbarConnecter.jsp" %>
 </c:if>
 <c:if test="${empty sessionScope.email}">
-    <%@include file="inc/navbar.jsp"%>
+    <%@include file="inc/navbar.jsp" %>
 </c:if>
-
-
 
 
 <div class="main">
@@ -38,38 +36,30 @@
         <div class="row">
             <div class="col-8 col-lg-8 col-md-8">
                 <form class="publier mt-5 px-4 py-4" action="espace" method="post" enctype="multipart/form-data">
-                    <h5>Publier un article</h5>
-                    <div class="form-group"><label for="titre">Titre</label>
-                        <input class="form-control" type="text" name="titre" id="titre" required=""></div>
-                    <div class="form-group"><label for="categorie">Categorie</label>
-                        <select class="form-control" name="categorie" required id="categorie">
-                            <optgroup label="Selectioner une categorie">
-                                <c:forEach var="categorie" items="${listcategorie}">
-                                    <option value="<c:out value="${categorie.nomCategorie}"></c:out>">
-                                        <c:out value="${categorie.nomCategorie}"></c:out>
-                                    </option>
-                                </c:forEach>
-                            </optgroup>
-                        </select></div>
-                    <div class="form-group"><label for="contenu">Contenu de l'article</label>
-                        <textarea class="form-control" wrap="hard" name="contenu" id="contenu" required
-                                  placeholder="Cet article"></textarea>
+                    <h4>Creer un nouveau professeur</h4>
+                    <div class="form-group"><label for="nom_prof">Nom professeur</label>
+                        <input class="form-control" type="text" name="nom_prof" id="nom_prof" required>
                     </div>
-                    <div class="form-group">
-                        <label for="image">Ajouter une image</label>
-                        <input type="file" class="ml-auto" name="image" id="image">
+                    <div class="form-group"><label for="prenom_prof">Prenom professeur</label>
+                        <input class="form-control" type="text" name="prenom_prof" id="prenom_prof" required>
                     </div>
-                    <input type="submit" class="btn btn-success" value="Valider votre publication">
+                    <div class="form-group"><label for="pseudo">Pseudo</label>
+                        <input class="form-control" type="text" name="pseudo" id="pseudo" required>
+                    </div>
+                    <div class="form-group"><label for="motdepasse">Mot de passe</label>
+                        <input class="form-control" type="password" name="motdepasse" id="motdepasse" required>
+                    </div>
+                    <div class="form-group"><label for="motdepasse">Adresse professeur</label>
+                        <input class="form-control" type="text" name="adresse_prof" id="adresse_prof">
+                    </div>
+                    <input type="submit" class="btn btn-success" value="Creer">
                 </form>
             </div>
         </div>
 
     </div>
-    
+
 </div>
-
-
-
 
 
 </body>
