@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: inno-kirito
-  Date: 24/08/2018
-  Time: 17:33
-  To change this template use File | Settings | File Templates.
---%>
+
 <c:if test="${empty sessionScope.email}">
     <c:redirect url="/index"></c:redirect>
 </c:if>

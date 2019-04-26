@@ -8,16 +8,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "creerEtudiant")
+@WebServlet(name = "creerClasse")
 @MultipartConfig(maxFileSize = 20971520, maxRequestSize = 52428800)// taille max d'upload
-public class creerEtudiant extends HttpServlet {
+public class creerClasse extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        this.getServletContext().getRequestDispatcher("/creerEtudiant.jsp").forward(request, response);
+        this.getServletContext().getRequestDispatcher("/creerClasse.jsp").forward(request, response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        this.getServletContext().getRequestDispatcher("/creerEtudiant.jsp").forward(request, response);
+        this.getServletContext().getRequestDispatcher("/creerClasse.jsp").forward(request, response);
     }
 }

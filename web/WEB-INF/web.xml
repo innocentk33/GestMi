@@ -22,6 +22,35 @@
         <url-pattern>/administrateur</url-pattern>
     </servlet-mapping>
     <!--    Administrateur-->
+
+    <servlet>
+        <servlet-name>creerEtudiant</servlet-name>
+        <servlet-class>servlets.creerEtudiant</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>creerEtudiant</servlet-name>
+        <url-pattern>/creerEtudiant</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>creerMatiere</servlet-name>
+        <servlet-class>servlets.creerMatiere</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>creerMatiere</servlet-name>
+        <url-pattern>/creerMatiere</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>creerClasse</servlet-name>
+        <servlet-class>servlets.creerClasse</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>creerClasse</servlet-name>
+        <url-pattern>/creerClasse</url-pattern>
+    </servlet-mapping>
+
     <servlet>
         <servlet-name>connexionAdmin</servlet-name>
         <servlet-class>servlets.connexionAdmin</servlet-class>

@@ -1,7 +1,7 @@
 
 <html>
 <head>
-    <title>Matiere</title>
+    <title>Classe</title>
     <style type="text/css">
         <%@include file="assets/css/margin.css" %>
     </style>
@@ -28,13 +28,13 @@
         </div>
         <div class="row">
             <div class="col-8 col-lg-8 col-md-8">
-                <form class="publier mt-5 px-4 py-4" action="espace" method="post" enctype="multipart/form-data">
-                    <h4>Creer un nouveau professeur</h4>
-                    <div class="form-group"><label for="nom_matiere">Intitule Matiere</label>
-                        <input class="form-control" type="text" name="nom_matiere" id="nom_matiere" required>
+                <form class="publier mt-5 px-4 py-4" action="creerClasse" method="post" enctype="multipart/form-data">
+                    <h4>Creer une nouvelle classe</h4>
+                    <div class="form-group"><label for="nom_classe">Nom classe</label>
+                        <input class="form-control" type="text" name="nom_classe" id="nom_classe" required>
                     </div>
-                    <div class="form-group"><label for="coif_matiere">Coefficientr</label>
-                        <input class="form-control" type="number" name="coif_matiere" id="coif_matiere" required>
+                    <div class="form-group"><label for="niveau_classe">Niveau Classe</label>
+                        <input class="form-control" type="text" name="niveau_classe" id="niveau_classe" required>
                     </div>
                     <input type="submit" class="btn btn-success" value="Creer">
                 </form>

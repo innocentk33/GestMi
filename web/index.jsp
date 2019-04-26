@@ -1,9 +1,5 @@
 <%--
-  Created by IntelliJ IDEA.
-  User: inno-kirito
-  Date: 23/08/2018
-  Time: 22:36
-  To change this template use File | Settings | File Templates.
+innocent kacou
 --%>
 
 <html>

@@ -1,8 +1,5 @@
 <%--
-  User: inno-kirito
-  Date: 25/08/2018
-  Time: 08:34
-
+  User: innocent kacou
 --%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page pageEncoding="UTF-8" %>

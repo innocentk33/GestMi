@@ -8,7 +8,7 @@
 
 <html>
 <head>
-    <title>Espace Membre</title>
+    <title>Etudiant</title>
     <style type="text/css">
         <%@include file="assets/css/margin.css" %>
     </style>
@@ -36,22 +36,47 @@
         <div class="row">
             <div class="col-8 col-lg-8 col-md-8">
                 <form class="publier mt-5 px-4 py-4" action="espace" method="post" enctype="multipart/form-data">
-                    <h4>Creer un nouveau professeur</h4>
-                    <div class="form-group"><label for="nom_prof">Nom professeur</label>
-                        <input class="form-control" type="text" name="nom_prof" id="nom_prof" required>
+                    <h4>Creer un Etudiant</h4>
+                    <div class="form-group"><label for="nom_etudiant">Nom etudiant</label>
+                        <input class="form-control" type="text" name="nom_etudiant" id="nom_etudiant" required>
                     </div>
-                    <div class="form-group"><label for="prenom_prof">Prenom professeur</label>
-                        <input class="form-control" type="text" name="prenom_prof" id="prenom_prof" required>
+                    <div class="form-group"><label for="prenom_etudiant">Prenom etudiant</label>
+                        <input class="form-control" type="text" name="prenom_etudiant" id="prenom_etudiant" required>
                     </div>
-                    <div class="form-group"><label for="pseudo">Pseudo</label>
-                        <input class="form-control" type="text" name="pseudo" id="pseudo" required>
+                    <div class="form-group"><label for="matricul_etudiant">Matricule Etudiant</label>
+                        <input class="form-control" type="text" name="matricul_etudiant" id="matricul_etudiant" required>
                     </div>
-                    <div class="form-group"><label for="motdepasse">Mot de passe</label>
-                        <input class="form-control" type="password" name="motdepasse" id="motdepasse" required>
+                    <div class="form-group"><label for="dat_naissance">Date de naissance</label>
+                        <input class="form-control" type="date" name="dat_naissance" id="dat_naissance" required>
                     </div>
-                    <div class="form-group"><label for="motdepasse">Adresse professeur</label>
-                        <input class="form-control" type="text" name="adresse_prof" id="adresse_prof">
+                    <div class="form-group"><label for="lieu_naissance">Lieu de naissance</label>
+                        <input class="form-control" type="text" name="lieu_naissance" id="lieu_naissance">
                     </div>
+                    <div class="form-group"><label for="tel_etudiant">Telephone</label>
+                        <input class="form-control" type="tel" name="tel_etudiant" id="tel_etudiant">
+                    </div>
+
+                    <select class="form-control" name="matiere" id="matiere" required>
+                        <optgroup label="Matiere">
+                         <%--  ToDo:Ajouter une boucle foreach ici--%>
+                            <option>
+
+                            </option>
+                        </optgroup>
+
+                    </select>
+
+
+                    <select class="form-control" name="classe" id="classe" required>
+
+                        <optgroup label="Matiere">
+                            <%--  ToDo:Ajouter une boucle foreach ici--%>
+                            <option>
+
+                            </option>
+                        </optgroup>
+
+                    </select>
                     <input type="submit" class="btn btn-success" value="Creer">
                 </form>
             </div>
