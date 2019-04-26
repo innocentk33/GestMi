@@ -1,24 +1,24 @@
 package servlets;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
-@WebServlet(name = "deconnexion")
-public class deconnexion extends HttpServlet {
+@WebServlet(name = "creerMatiere")
+@MultipartConfig(maxFileSize = 20971520, maxRequestSize = 52428800)// taille max d'upload
+public class creerMatiere extends HttpServlet {
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        this.getServletContext().getRequestDispatcher("/creerMatiere.jsp").forward(request, response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        HttpSession session = request.getSession();
-        session.invalidate();
-        response.sendRedirect("index");
 
-        this.getServletContext().getRequestDispatcher("/index2.jsp").forward(request, response);
+        this.getServletContext().getRequestDispatcher("/creerMatiere.jsp").forward(request, response);
     }
 }

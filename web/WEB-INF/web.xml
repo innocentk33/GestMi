@@ -12,7 +12,7 @@
     </jsp-config>
 
 
-    <!--    administrateur-->
+    <!--    Administrateur-->
     <servlet>
         <servlet-name>administrateur</servlet-name>
         <servlet-class>servlets.administrateur</servlet-class>
@@ -21,16 +21,23 @@
         <servlet-name>administrateur</servlet-name>
         <url-pattern>/administrateur</url-pattern>
     </servlet-mapping>
-    <!--    administrateur-->
-
-
+    <!--    Administrateur-->
     <servlet>
-        <servlet-name>connexion</servlet-name>
-        <servlet-class>servlets.connexion</servlet-class>
+        <servlet-name>connexionAdmin</servlet-name>
+        <servlet-class>servlets.connexionAdmin</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>connexion</servlet-name>
-        <url-pattern>/connexion</url-pattern>
+        <servlet-name>connexionAdmin</servlet-name>
+        <url-pattern>/connexionAdmin</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>connexionProf</servlet-name>
+        <servlet-class>servlets.connexionProf</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>connexionProf</servlet-name>
+        <url-pattern>/connexionProf</url-pattern>
     </servlet-mapping>
 
 

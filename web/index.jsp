@@ -1,73 +1,36 @@
 <%--
   Created by IntelliJ IDEA.
   User: inno-kirito
-  Date: 25/08/2018
-  Time: 08:29
+  Date: 23/08/2018
+  Time: 22:36
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>GestMi</title>
+    <title>Connexion</title>
 </head>
 <body>
-<c:if test="${!empty sessionScope.email}">
-    <%@include file="inc/navbarConnecter.jsp"%>
-</c:if>
-<c:if test="${empty sessionScope.email}">
-    <%@include file="inc/navbar.jsp"%>
-</c:if>
 
+<%@include file="inc/navbar.jsp" %>
 
-<!-- section -->
-<div class="section">
-    <!-- container -->
-    <div class="container">
-        <!-- row -->
-        <div class="row">
-            <!-- post -->
-            <div class="col-md-6">
-
-            </div>
-            <!-- /post -->
-
-            <!-- post -->
-            <div class="col-md-6">
-
-            <!-- /post -->
+<div class="login-clean">
+    <form method="post" action="connexionAdmin">
+        <h4 class="center-block text-center">Connexion Administrateur</h4>
+        <div class="illustration"><i class="icon ion-ios-contact"></i></div>
+        <div class="form-group"><input class="form-control" type="email" name="email" required="" placeholder="Email">
         </div>
-        <!-- /row -->
-
-        <!-- row -->
-        <div class="row">
-            <div class="col-md-12">
-                <div class="section-title">
-                    <h2>Articles recents</h2>
-                </div>
-            </div>
-
-            <div class="clearfix visible-md visible-lg"></div>
+        <div class="form-group"><input class="form-control" type="password" name="motdepasse" required
+                                       placeholder="Mot de passe"></div>
+        <div class="form-group">
+            <button class="btn btn-primary btn-block" type="submit">Connexion</button>
         </div>
-        <!-- /row -->
-
-        <!-- row -->
-        <div class="row">
-            <div class="col-md-8">
-                <div class="row">
-                    <!-- post -->
-                    <!-- /post -->
-                    <div class="clearfix visible-md visible-lg"></div>
-
-                </div>
-            </div>
+        <div class="form-group">
+            <a  href="<c:url value="/connexionProf"></c:url>" class="btn btn-success btn-block">Connexion professeur</a>
         </div>
-        <!-- /row -->
-    </div>
-    <!-- /container -->
+
+
+    </form>
 </div>
-<!-- /section -->
 </body>
 </html>

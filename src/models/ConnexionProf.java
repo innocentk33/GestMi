@@ -5,7 +5,7 @@ import beans.Membres;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-public class Connexion {
+public class ConnexionProf {
     Database bdd = new Database();
 
     public String getNomSession() {
@@ -29,13 +29,13 @@ public class Connexion {
             bdd_verif.setString(2, membres.getMotdepasse());
             ResultSet resultSet = bdd_verif.executeQuery();
             if (resultSet.next()) {
-                redirection = "administrateur";
+                redirection = "Administrateur";
                 nom = resultSet.getString("nom");
                 membres.setNom(nom);
                 setNomSession(nom);
                 System.out.println(membres.getNom());
             } else
-                redirection = "connexion";
+                redirection = "connexionProf";
 
         } catch (Exception e) {
             e.printStackTrace();

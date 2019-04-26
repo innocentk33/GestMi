@@ -6,6 +6,9 @@ public class Etudiant {
     private String matricul_etudiant;
     private String dat_etudiant;
     private String lieu_etudiant;
+    private String adresse_etudiant;
+    private String tel_etudiant;
+
 
     public String getNom_etudiant() {
         return nom_etudiant;
@@ -62,9 +65,6 @@ public class Etudiant {
     public void setTel_etudiant(String tel_etudiant) {
         this.tel_etudiant = tel_etudiant;
     }
-
-    private String adresse_etudiant;
-    private String tel_etudiant;
 
 
 }
